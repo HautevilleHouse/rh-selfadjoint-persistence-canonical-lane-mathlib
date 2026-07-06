@@ -1,0 +1,7 @@
+-- This module is the root of the RHSelfadjointPersistenceCanonicalLaneLean Lean proof package.
+import RHSelfadjointPersistenceCanonicalLaneLean.Basic
+import RHSelfadjointPersistenceCanonicalLaneLean.SourcePackage
+import RHSelfadjointPersistenceCanonicalLaneLean.SourceDependencies
+import RHSelfadjointPersistenceCanonicalLaneLean.Formalization
+import RHSelfadjointPersistenceCanonicalLaneLean.ReviewerBridge
+import RHSelfadjointPersistenceCanonicalLaneLean.TheoremStatement
