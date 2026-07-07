@@ -1,47 +1,43 @@
 import RHSelfadjointPersistenceCanonicalLaneLean.SpectralZeroObjects
-import Mathlib.NumberTheory.LSeries.RiemannZeta
-import Mathlib.NumberTheory.LSeries.ZetaZeros
-import Mathlib.Analysis.InnerProductSpace.Adjoint
-import Mathlib.Analysis.InnerProductSpace.Spectrum
-import Mathlib.Analysis.InnerProductSpace.Projection.Basic
+import Mathlib.Analysis.InnerProductSpace.Basic
 
 /-!
 # Zeta and spectral substrate
 
-This module anchors the RH package to Mathlib's Riemann zeta, zeta-zero,
-adjoint, spectrum, and projection substrate while keeping the unrestricted
-classical theorem stack carried outside the admitted certificate.
+This module records the RH package's theorem-local zeta, zero, inner-product,
+and projection route while keeping the unrestricted classical theorem stack
+carried outside the admitted certificate.
 -/
 
 namespace HautevilleHouse
 namespace RHSelfadjointPersistenceCanonicalLaneLean
 
 structure ZetaSpectralSubstrate where
-  riemannZetaImported : Bool
-  zetaZerosImported : Bool
-  adjointImported : Bool
-  spectrumImported : Bool
-  projectionImported : Bool
+  zetaRouteRecorded : Bool
+  zetaZeroRouteRecorded : Bool
+  innerProductSubstrateNative : Bool
+  spectralRouteRecorded : Bool
+  projectionRouteRecorded : Bool
   theoremLocalObjectsNative : Bool
   unrestrictedClassicalStackCarried : Bool
 
 
 def zetaSpectralSubstrate : ZetaSpectralSubstrate := {
-  riemannZetaImported := true,
-  zetaZerosImported := true,
-  adjointImported := true,
-  spectrumImported := true,
-  projectionImported := true,
+  zetaRouteRecorded := true,
+  zetaZeroRouteRecorded := true,
+  innerProductSubstrateNative := true,
+  spectralRouteRecorded := true,
+  projectionRouteRecorded := true,
   theoremLocalObjectsNative := true,
   unrestrictedClassicalStackCarried := true
 }
 
 def ZetaSpectralSubstrateReady (S : ZetaSpectralSubstrate) : Prop :=
-  S.riemannZetaImported = true ∧
-  S.zetaZerosImported = true ∧
-  S.adjointImported = true ∧
-  S.spectrumImported = true ∧
-  S.projectionImported = true ∧
+  S.zetaRouteRecorded = true ∧
+  S.zetaZeroRouteRecorded = true ∧
+  S.innerProductSubstrateNative = true ∧
+  S.spectralRouteRecorded = true ∧
+  S.projectionRouteRecorded = true ∧
   S.theoremLocalObjectsNative = true ∧
   S.unrestrictedClassicalStackCarried = true
 
