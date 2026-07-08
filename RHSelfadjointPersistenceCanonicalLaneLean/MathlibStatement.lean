@@ -5,7 +5,7 @@ import CanonicalLaneMathlibCore
 # Mathlib Statement Layer
 
 This module imports the shared Mathlib-backed Canonical Lane core and the
-the Riemann Hypothesis closure pilot. The pilot closes over its admitted class and carries the
+Riemann Hypothesis closure pilot. The pilot closes over its admitted class and carries the
 unrestricted classical boundary separately.
 -/
 
@@ -86,10 +86,18 @@ theorem mathlib_common_core_idempotence_checked :
 def theoremSpecificClosurePilotClosed : Prop :=
   forall A : AdmissibleClass, NativeClosureTheorem A
 
+def theoremSpecificConditionalRouteClosed : Prop :=
+  forall A : AdmissibleClass, ConditionalRouteClosure A
+
 theorem theorem_specific_closure_pilot_checked :
     theoremSpecificClosurePilotClosed := by
   intro A
   exact native_closure_theorem_checked A
+
+theorem theorem_specific_conditional_route_checked :
+    theoremSpecificConditionalRouteClosed := by
+  intro A
+  exact conditional_route_closure_checked A
 
 end RHSelfadjointPersistenceCanonicalLaneLean
 end HautevilleHouse
